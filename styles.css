@@ -1,0 +1,432 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*------------------------------------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/*---------------------------------NAVBAR-----------------------------------*/
+#header-img {
+  position: fixed;
+  object-fit: cover;
+  width: 50x;
+  height: 100px;
+  margin: 10px 10px 20px 20px;
+}
+
+h1 {
+  font-family: "Playfair", Georgia, serif;
+  font-size: 3em;
+  font-weight: normal;
+  margin-top: 25px;
+  padding-left: 120px;
+}
+
+#nav-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  width: 100vw;
+  height: 8em;
+  padding-top: 0.5em;
+  z-index: 1000;
+  overflow-x: auto;
+  background-color: white;
+}
+
+.logo-container {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1em;
+  margin-right: 4em;
+}
+
+.nav-link {
+  font-family: "Montserrat", Verdana, sans-serif;
+  text-decoration: none;
+  font-size: 1.25em;
+  display: flex;
+  padding: 0.5em 1.5em;
+  margin-top: 1.65em;
+  border-bottom: white solid 1px;
+  color: black;
+}
+
+main {
+  margin-top: 8em;
+  font-family: "Montserrat", Verdana, sans-serif;
+}
+
+/*---------------------------------HERO-----------------------------------*/
+
+#hero-and-fragrance {
+  background: linear-gradient(180deg, white, rgb(230, 218, 213) 180%);
+}
+
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+#hero-section > p {
+  font-style: italic;
+  font-size: 1em;
+  width: 30em;
+  text-align: center;
+  margin: 1.5em auto;
+}
+
+#img_perfume {
+  width: 500px;
+}
+
+/*---------------------------------FRAGRANCE-NOTES-----------------------------------*/
+#Fragrance_Notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+  padding-bottom: 3em;
+}
+
+h3 {
+  font-weight: 550;
+  font-size: 1.5em;
+}
+
+#Fragrance_Notes > p {
+  line-height: 2.5em;
+}
+
+#Fragrance_Notes > p:first-of-type {
+  margin-top: 1em;
+}
+
+.notes {
+  font-weight: 550;
+}
+
+/*---------------------------------REVIEW-----------------------------------*/
+#Review {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5em auto;
+  height: 100vh;
+  width: 100%;
+}
+
+#Review::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.pinimg.com/736x/5b/ca/53/5bca53f53e435cc0219a13318cfb2924.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+#video {
+  //max-width: 40vw;
+  //max-height: 80vh;
+  margin: auto auto;
+  opacity: 100%;
+  z-index: 1;
+}
+
+/*---------------------------------SHOP-----------------------------------*/
+#Shop {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.pricing-section {
+  max-width: 100%;
+  margin: 2em auto;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.price-card {
+  background-color: white;
+  border: 3px solid #f3f3f3;
+  margin: 0 1em 1em 1em;
+  padding: 50px 30px 30px 30px;
+  position: relative;
+  text-align: center;
+  min-width: 250px; /* Prevent cards from becoming too narrow */
+  max-width: 400px; /* Prevent cards from becoming too wide on large screens */
+}
+
+.card-title {
+  position: absolute;
+  height: 3.5em;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #feeced;
+  color: black;
+  padding: 10px 15px;
+  border-bottom: 3px solid #f3f3f3;
+}
+
+.card-title h4 {
+  font-size: 1.25em;
+  margin: 0;
+  color: black;
+  font-weight: 550;
+}
+
+.price-card > img {
+  width: 250px;
+  height: 250px;
+  margin: 30px auto;
+}
+
+.price {
+  font-size: 1.5em;
+  color: #333;
+  margin: 1em auto;
+}
+
+.features {
+  list-style: none;
+}
+
+.features li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+.cta-button {
+  background-color: #feeced;
+  color: 1px solid #f3f3f3;
+  border: none;
+  padding: 12px 30px;
+  margin-top: 1em;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-button:active {
+  background-color: #efd9db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*---------------------------------NEWSLETTER-----------------------------------*/
+#newletter {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#form {
+  width: 30vw;
+  height: 20em;
+  border: 1px solid black;
+  margin: 3em auto;
+  padding: 2em;
+  align-content: center;
+  text-align: left;
+}
+
+#form h4 {
+  font-size: 1.25em;
+  color: black;
+  font-weight: 550;
+}
+
+#form p {
+  width: 15vw;
+  margin-top: 1em;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  padding: 0;
+  border: none;
+}
+
+#email {
+  width: 15vw;
+}
+
+#submit {
+  width: 9em;
+  justify-content: flex-end;
+  background-color: #feeced;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+#submit:active {
+  background-color: #efd9db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*---------------------------------FOOTER-----------------------------------*/
+footer {
+  display: block;
+  background-color: #feeced;
+  width: 100%;
+  height: 3em;
+  margin-top: 3em;
+  text-align: right;
+}
+
+footer p {
+  padding: 0.8em 2em 0 1em;
+}
+
+@media (max-width: 935px) {
+  #header-img {
+    object-fit: cover;
+    width: 40x;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 2em;
+    padding-left: 100px;
+  }
+
+  #nav-bar {
+    width: 100vw;
+    height: 6.5em;
+  }
+
+  .nav-link {
+    font-size: 1em;
+  }
+
+  /*---------------------------------HERO-----------------------------------*/
+  #img_perfume {
+    width: 300px;
+  }
+
+  /*---------------------------------REVIEW-----------------------------------*/
+  #video {
+    width: 600px;
+    height: 350px;
+  }
+}
+  
+  @media (max-width: 1480px) {
+    /*---------------------------------NEWSLETTER-----------------------------------*/
+  #form {
+    width: 70vw;
+    height: 20em;
+    padding: 2em;
+  }
+
+  #form p {
+    width: 38vw;
+  }
+
+  #email {
+    width: 38vw;
+  }
+  }
+}
