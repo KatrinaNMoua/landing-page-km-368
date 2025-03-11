@@ -1,2 +1,11 @@
 # landing-page-km-368
-Free Code Camp's product landing page
+Deploying Free Code Camp's product landing page using Netlify.
+
+**Tools Used**
+
+* Free Code Camp
+* codepen.io
+* GitHub
+* repositories
+* codespaces
+* Netlify
